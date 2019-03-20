@@ -1,0 +1,13 @@
+<%= @order.username %> 您好
+以下是您的訂單
+<% products = @order.products %>
+<% products.each do |product| %>
+  <p>
+    <%= product.name%>
+  <p>
+<% end %>
+訂購人：<%= @order.username %>
+<br />
+電子郵件信箱：<%= @order.email %>
+<br />
+地址：<%= @order.address %>
