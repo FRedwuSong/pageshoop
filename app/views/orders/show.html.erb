@@ -15,5 +15,11 @@
   <%= @order.address %>
 </p>
 
+<% products = @order.products %>
+<% products.each do |product| %>
+  <p>
+    <%= product.name%>
+  <p>
+<% end %>
 <%= link_to 'Edit', edit_order_path(@order) %> |
 <%= link_to 'Back', orders_path %>
