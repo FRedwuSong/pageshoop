@@ -11,6 +11,10 @@
     </div>
   <% end %>
 
+  <%= form.collection_check_boxes :product_ids, Product.all, :id, :name, checked: order.products.map(&:id) do |p| %>
+     <%= p.check_box %> <%= p.label %>
+  <% end %>
+
   <div class="field">
     <%= form.label :username %>
     <%= form.text_field :username %>
